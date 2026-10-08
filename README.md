@@ -47,6 +47,8 @@ To launch the interactive interface after training:
 streamlit run src/dashboard.py
 ```
 
+The dashboard has three views: **Live prediction**, **Full pipeline** (all-model metrics and charts), and **All syllabus topics** (separate topic reports and visualizations). In the final tab, select **Run all 19 topic modules** if the topic outputs have not yet been generated.
+
 ## Topic-wise syllabus modules
 
 Each topic is now separate, so you can open, explain, and run the relevant file during a practical examination. All topic outputs are saved under `reports/topics/` and `plots/topics/`.
