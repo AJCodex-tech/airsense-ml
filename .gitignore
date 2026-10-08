@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.streamlit/
+
+# Generated project outputs
+data/air_quality_demo.csv
+models/*.joblib
+reports/*.csv
+reports/*.md
+plots/*.png
