@@ -9,3 +9,5 @@ models/*.joblib
 reports/*.csv
 reports/*.md
 plots/*.png
+reports/topics/
+plots/topics/

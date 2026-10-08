@@ -190,7 +190,7 @@ def _train_classifiers(
             criterion="entropy", max_depth=8, min_samples_leaf=8, random_state=RANDOM_STATE
         ),
         "Linear SVM": LinearSVC(random_state=RANDOM_STATE, dual="auto"),
-        "RBF SVM": SVC(kernel="rbf", probability=True, random_state=RANDOM_STATE),
+        "RBF SVM": SVC(kernel="rbf", random_state=RANDOM_STATE),
         "Perceptron": Perceptron(max_iter=1500, tol=1e-3, random_state=RANDOM_STATE),
         "MLP": MLPClassifier(
             hidden_layer_sizes=(32, 16),

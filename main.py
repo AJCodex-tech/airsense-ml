@@ -7,6 +7,7 @@ from pathlib import Path
 
 from src.generate_data import generate_dataset
 from src.train import train_project
+from src.topics.run_all_topics import main as run_all_topics
 
 
 ROOT = Path(__file__).resolve().parent
@@ -17,9 +18,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run AirSense project tasks.")
     parser.add_argument(
         "--action",
-        choices=("generate", "train", "all"),
+        choices=("generate", "train", "topics", "all"),
         default="all",
-        help="generate data, train existing data, or run both (default: all)",
+        help="generate data, train existing data, run topic modules, or run both (default: all)",
     )
     parser.add_argument("--rows", type=int, default=2000, help="Demo-data row count")
     parser.add_argument("--data", type=Path, default=DEFAULT_DATA, help="CSV data path")
@@ -38,6 +39,9 @@ def main() -> None:
         print("Training complete.")
         print(f"Best pollution classifier: {result['best_classifier']}")
         print(f"AQI regression R²: {result['regression_r2']:.3f}")
+
+    if args.action == "topics":
+        run_all_topics()
 
 
 if __name__ == "__main__":

@@ -47,6 +47,45 @@ To launch the interactive interface after training:
 streamlit run src/dashboard.py
 ```
 
+## Topic-wise syllabus modules
+
+Each topic is now separate, so you can open, explain, and run the relevant file during a practical examination. All topic outputs are saved under `reports/topics/` and `plots/topics/`.
+
+| Module | Topic represented separately |
+| --- | --- |
+| `01_numpy_numerical_processing.py` | NumPy numerical statistics |
+| `02_pandas_missing_data.py` | Pandas and missing-data imputation |
+| `03_matplotlib_visualization.py` | Matplotlib graphs |
+| `04_feature_scaling.py` | StandardScaler feature scaling |
+| `05_simple_linear_regression.py` | Simple Linear Regression |
+| `06_multiple_linear_regression.py` | Multiple Linear Regression |
+| `07_mle_bayesian_formulation.py` | Gaussian MLE and Bayesian posterior probability |
+| `08_gaussian_naive_bayes.py` | Naive Bayes |
+| `09_logistic_regression.py` | Logistic Regression |
+| `10_id3_decision_tree.py` | Entropy Decision Tree (ID3-style) |
+| `11_perceptron.py` | Perceptron |
+| `12_mlp_backpropagation.py` | MLP, ReLU activation, and backpropagation |
+| `13_linear_svm.py` | Linear SVM |
+| `14_nonlinear_svm.py` | Non-linear/RBF SVM |
+| `15_kmeans_clustering.py` | K-Means clustering |
+| `16_agglomerative_linkage.py` | Agglomerative clustering, linkage, dendrogram |
+| `17_em_gaussian_mixture.py` | EM via Gaussian Mixture Models |
+| `18_pca.py` | Principal Component Analysis |
+| `19_evaluation_metrics.py` | Accuracy, precision, recall, F1, ROC-AUC |
+
+Run every topic separately in sequence:
+
+```powershell
+python main.py --action topics
+```
+
+Or run an individual topic, for example:
+
+```powershell
+python -m src.topics.09_logistic_regression
+python -m src.topics.16_agglomerative_linkage
+```
+
 ## Commands
 
 ```powershell
